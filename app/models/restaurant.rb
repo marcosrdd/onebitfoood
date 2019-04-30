@@ -3,7 +3,8 @@ class Restaurant < ApplicationRecord
   has_many :product_categories
   has_many :orders
   has_many :reviews
-
+  has_one_attached :image
+  
   validates_associated :category
   validates :name, presence: true
   validates :status, presence: true
